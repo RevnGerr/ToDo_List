@@ -41,6 +41,9 @@ const deleteTodo = async (req, res) => {
     const response = await Todo.deleteTodo(id); // استدعاء دالة حذف التودو
     res.status(200).json(response); // إرجاع رسالة تأكيد الحذف
   } catch (error) {
+
+
+    
     res.status(500).json({ message: 'Error deleting todo', error: error.message });
   }
 };
